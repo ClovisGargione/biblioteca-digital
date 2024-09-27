@@ -86,7 +86,6 @@
 	    <artifactId>hibernate-entitymanager</artifactId>
 	    <version>5.6.15.Final</version>
 	</dependency>
-
 	<dependency>
 	    <groupId>log4j</groupId>
 	    <artifactId>log4j</artifactId>
@@ -124,21 +123,6 @@
 	    <version>2.0.SP1</version>
 	    <scope>provided</scope>
 	</dependency>
-	<dependency>
-	    <groupId>io.swagger.core.v3</groupId>
-	    <artifactId>swagger-annotations</artifactId>
-	    <version>2.2.21</version>
-	</dependency>
-	 <dependency>
-	    <groupId>io.swagger.core.v3</groupId>
-	    <artifactId>swagger-jaxrs2-jakarta</artifactId>
-	    <version>2.2.21</version>
-	 </dependency>
-	 <dependency>
-	    <groupId>io.swagger.core.v3</groupId>
-	    <artifactId>swagger-jaxrs2-servlet-initializer-jakarta</artifactId>
-	    <version>2.2.21</version>
-	 </dependency>
   </dependencies>
   <build>
     <finalName>sankhya</finalName>
