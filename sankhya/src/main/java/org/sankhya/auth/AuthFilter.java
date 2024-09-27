@@ -17,6 +17,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.ws.rs.HttpMethod;
 
+
+
 public class AuthFilter implements Filter {
 
 	private static final String AUTH_ERROR_MSG = "Certifique-se de que sua solicitação tenha um cabeçalho de autorização",
