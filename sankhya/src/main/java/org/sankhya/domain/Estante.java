@@ -25,62 +25,62 @@ import jakarta.xml.bind.annotation.XmlRootElement;
 @Entity(name = "estante")
 public class Estante {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
-	
-	@OneToOne
-	@JoinColumn(name = "usuario_id")
-	@JsonManagedReference
-	private Usuario usuario;
-	
-	@OneToMany(fetch = FetchType.EAGER, cascade = { CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE })
-	@JoinColumn(name = "estante_id")
-	private List<Livro> livros = new ArrayList<>();
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
 
-	public boolean temLivros() {
-		return livros.size() > 0;
-	}
+    @OneToOne
+    @JoinColumn(name = "usuario_id")
+    @JsonManagedReference
+    private Usuario usuario;
 
-	public Collection<Livro> todosLivros() {
-		return Collections.unmodifiableCollection(livros);
-	}
+    @OneToMany(fetch = FetchType.EAGER, cascade = { CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE })
+    @JoinColumn(name = "estante_id")
+    private List<Livro> livros = new ArrayList<>();
 
-	public void adicionar(Livro livro) {
-		livros.add(livro);
-	}
+    public boolean temLivros() {
+	return livros.size() > 0;
+    }
 
-	public Estante() {
-		super();
-	}
+    public Collection<Livro> todosLivros() {
+	return Collections.unmodifiableCollection(livros);
+    }
 
-	public Estante(Integer id, List<Livro> livros) {
-		super();
-		this.id = id;
-		this.livros = livros;
-	}
+    public void adicionar(Livro livro) {
+	livros.add(livro);
+    }
 
-	public Integer getId() {
-		return id;
-	}
+    public Estante() {
+	super();
+    }
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
-	
-	public Usuario getUsuario() {
-		return usuario;
-	}
+    public Estante(Integer id, List<Livro> livros) {
+	super();
+	this.id = id;
+	this.livros = livros;
+    }
 
-	public void setUsuario(Usuario usuario) {
-		this.usuario = usuario;
-	}
+    public Integer getId() {
+	return id;
+    }
 
-	public List<Livro> getLivros() {
-		return livros;
-	}
+    public void setId(Integer id) {
+	this.id = id;
+    }
 
-	public void setLivros(List<Livro> livros) {
-		this.livros = livros;
-	}
+    public Usuario getUsuario() {
+	return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+	this.usuario = usuario;
+    }
+
+    public List<Livro> getLivros() {
+	return livros;
+    }
+
+    public void setLivros(List<Livro> livros) {
+	this.livros = livros;
+    }
 }

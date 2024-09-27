@@ -5,33 +5,33 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class LoginDto {
 
-	private String login;
-	
-	private String senha;
-	
-	public LoginDto() {
-		super();
-	}
+    private String login;
 
-	public LoginDto(String login, String senha) {
-		super();
-		this.login = login;
-		this.senha = senha;
-	}
+    private String senha;
 
-	public String getLogin() {
-		return login;
-	}
+    public LoginDto() {
+	super();
+    }
 
-	public void setLogin(String login) {
-		this.login = login;
-	}
+    public LoginDto(String login, String senha) {
+	super();
+	this.login = login;
+	this.senha = senha;
+    }
 
-	public String getSenha() {
-		return senha;
-	}
+    public String getLogin() {
+	return login;
+    }
 
-	public void setSenha(String senha) {
-		this.senha = senha;
-	}
+    public void setLogin(String login) {
+	this.login = login;
+    }
+
+    public String getSenha() {
+	return senha;
+    }
+
+    public void setSenha(String senha) {
+	this.senha = senha;
+    }
 }

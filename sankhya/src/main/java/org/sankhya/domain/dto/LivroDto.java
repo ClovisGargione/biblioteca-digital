@@ -6,57 +6,57 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class LivroDto {
-	
-	private Integer id;
-	
-	private String titulo;
-	
-	private String autor;
-	
-	@Range(min = 0, max = 10)
-	private Integer nota;
 
-	public LivroDto() {
-		super();
-	}
+    private Integer id;
 
-	public LivroDto(Integer id, String titulo, String autor, @Range(min = 0, max = 10) Integer nota) {
-		super();
-		this.id = id;
-		this.titulo = titulo;
-		this.autor = autor;
-		this.nota = nota;
-	}
+    private String titulo;
 
-	public Integer getId() {
-		return id;
-	}
+    private String autor;
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
+    @Range(min = 0, max = 10)
+    private Integer nota;
 
-	public String getTitulo() {
-		return titulo;
-	}
+    public LivroDto() {
+	super();
+    }
 
-	public void setTitulo(String titulo) {
-		this.titulo = titulo;
-	}
+    public LivroDto(Integer id, String titulo, String autor, @Range(min = 0, max = 10) Integer nota) {
+	super();
+	this.id = id;
+	this.titulo = titulo;
+	this.autor = autor;
+	this.nota = nota;
+    }
 
-	public String getAutor() {
-		return autor;
-	}
+    public Integer getId() {
+	return id;
+    }
 
-	public void setAutor(String autor) {
-		this.autor = autor;
-	}
+    public void setId(Integer id) {
+	this.id = id;
+    }
 
-	public Integer getNota() {
-		return nota;
-	}
+    public String getTitulo() {
+	return titulo;
+    }
 
-	public void setNota(Integer nota) {
-		this.nota = nota;
-	}
+    public void setTitulo(String titulo) {
+	this.titulo = titulo;
+    }
+
+    public String getAutor() {
+	return autor;
+    }
+
+    public void setAutor(String autor) {
+	this.autor = autor;
+    }
+
+    public Integer getNota() {
+	return nota;
+    }
+
+    public void setNota(Integer nota) {
+	this.nota = nota;
+    }
 }

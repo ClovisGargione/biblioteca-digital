@@ -8,21 +8,21 @@ import jakarta.xml.bind.annotation.XmlRootElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class Token {
 
-	private String token;
+    private String token;
 
-    public Token(){
+    public Token() {
 
     }
 
     public Token(String token) {
-        this.token = token;
+	this.token = token;
     }
 
     public String getToken() {
-        return token;
+	return token;
     }
 
-    public void setToken(String token){
-        this.token = token;
+    public void setToken(String token) {
+	this.token = token;
     }
 }

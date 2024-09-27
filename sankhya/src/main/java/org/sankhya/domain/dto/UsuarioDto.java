@@ -5,55 +5,55 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class UsuarioDto {
 
-	private Integer id;
-	
-	private String login;
-	
-	private String nome;
-	
-	private String senha;
-	
-	public UsuarioDto() {
-		super();
-	}
+    private Integer id;
 
-	public UsuarioDto(Integer id, String login, String nome, String senha) {
-		super();
-		this.id = id;
-		this.login = login;
-		this.nome = nome;
-		this.senha = senha;
-	}
+    private String login;
 
-	public Integer getId() {
-		return id;
-	}
+    private String nome;
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
+    private String senha;
 
-	public String getLogin() {
-		return login;
-	}
+    public UsuarioDto() {
+	super();
+    }
 
-	public void setLogin(String login) {
-		this.login = login;
-	}
+    public UsuarioDto(Integer id, String login, String nome, String senha) {
+	super();
+	this.id = id;
+	this.login = login;
+	this.nome = nome;
+	this.senha = senha;
+    }
 
-	public String getNome() {
-		return nome;
-	}
+    public Integer getId() {
+	return id;
+    }
 
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
+    public void setId(Integer id) {
+	this.id = id;
+    }
 
-	public String getSenha() {
-		return senha;
-	}
+    public String getLogin() {
+	return login;
+    }
 
-	public void setSenha(String senha) {
-		this.senha = senha;
-	}
+    public void setLogin(String login) {
+	this.login = login;
+    }
+
+    public String getNome() {
+	return nome;
+    }
+
+    public void setNome(String nome) {
+	this.nome = nome;
+    }
+
+    public String getSenha() {
+	return senha;
+    }
+
+    public void setSenha(String senha) {
+	this.senha = senha;
+    }
 }

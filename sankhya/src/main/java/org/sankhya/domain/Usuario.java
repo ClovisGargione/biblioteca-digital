@@ -18,71 +18,71 @@ import jakarta.xml.bind.annotation.XmlRootElement;
 @Entity(name = "usuario")
 public class Usuario {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
-	
-	private String login;
-	
-	private String nome;
-	
-	@JsonIgnore
-	private String senha;
-	
-	@OneToOne(mappedBy = "usuario", cascade = { CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE })
-	@JsonBackReference
-	private Estante estante;
-	
-	public Usuario() {
-		super();
-	}
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
 
-	public Usuario(Integer id, String login, String nome, String senha) {
-		super();
-		this.id = id;
-		this.login = login;
-		this.nome = nome;
-		this.senha = senha;
-	}
+    private String login;
 
-	public Integer getId() {
-		return id;
-	}
+    private String nome;
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
+    @JsonIgnore
+    private String senha;
 
-	public String getLogin() {
-		return login;
-	}
+    @OneToOne(mappedBy = "usuario", cascade = { CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE })
+    @JsonBackReference
+    private Estante estante;
 
-	public void setLogin(String login) {
-		this.login = login;
-	}
+    public Usuario() {
+	super();
+    }
 
-	public String getNome() {
-		return nome;
-	}
+    public Usuario(Integer id, String login, String nome, String senha) {
+	super();
+	this.id = id;
+	this.login = login;
+	this.nome = nome;
+	this.senha = senha;
+    }
 
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
+    public Integer getId() {
+	return id;
+    }
 
-	public String getSenha() {
-		return senha;
-	}
+    public void setId(Integer id) {
+	this.id = id;
+    }
 
-	public void setSenha(String senha) {
-		this.senha = senha;
-	}
+    public String getLogin() {
+	return login;
+    }
 
-	public Estante getEstante() {
-		return estante;
-	}
+    public void setLogin(String login) {
+	this.login = login;
+    }
 
-	public void setEstante(Estante estante) {
-		this.estante = estante;
-	}
-	
+    public String getNome() {
+	return nome;
+    }
+
+    public void setNome(String nome) {
+	this.nome = nome;
+    }
+
+    public String getSenha() {
+	return senha;
+    }
+
+    public void setSenha(String senha) {
+	this.senha = senha;
+    }
+
+    public Estante getEstante() {
+	return estante;
+    }
+
+    public void setEstante(Estante estante) {
+	this.estante = estante;
+    }
+
 }
