@@ -1,0 +1,2 @@
+export const SET_LIVROS = 'LIVRO/SET_LIVROS'
+export const SET_TEM_LIVROS = 'LIVRO/SET_TEM_LIVROS'

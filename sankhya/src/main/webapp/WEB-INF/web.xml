@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app
+    version="4.0"
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:javaee="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xml="http://www.w3.org/XML/1998/namespace"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+  <display-name>Archetype Created Web Application</display-name>
+	
+	<filter>
+        <filter-name>SankyaCors</filter-name>
+        <filter-class>org.sankhya.restConfig.CORSFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>SankyaCors</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    
+    <!-- FILTRO PARA AUTENTICACAO -->
+    <filter>
+        <filter-name>SankyaAuth</filter-name>
+        <filter-class>org.sankhya.auth.AuthFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>SankyaAuth</filter-name>
+        <url-pattern>/api/v1/secure/*</url-pattern>
+    </filter-mapping>
+</web-app>
